@@ -50,19 +50,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.1"
-  cupertino_icons:
-    dependency: "direct main"
-    description:
-      name: cupertino_icons
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.3"
   dartvolt:
     dependency: "direct main"
     description:
-      name: dartvolt
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "/home/jan/Desktop/workspaces/dartvolt"
+      relative: false
+    source: path
     version: "0.0.2"
   eventify:
     dependency: transitive
@@ -144,6 +137,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.11.0"
+  shared_preferences:
+    dependency: "direct main"
+    description:
+      name: shared_preferences
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.3"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -214,3 +214,4 @@ packages:
     version: "2.1.0"
 sdks:
   dart: ">=2.12.0 <3.0.0"
+  flutter: ">=0.1.4"
