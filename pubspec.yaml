@@ -29,9 +29,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  dartvolt:
-    path: /home/jan/Desktop/workspaces/dartvolt # ^0.0.2
-  shared_preferences: ^0.4.3
+  revolt_client:
+    path: packages/revolt_client
+  shared_preferences: ^2.0.9
+  flutter_bloc: ^8.0.0
+  equatable: ^2.0.3
+
 
 dev_dependencies:
   flutter_test:
