@@ -27,3 +27,25 @@ Future<SessionDetails> login(ClientConfig clientConfig,
     throw LoginException();
   }
 }
+
+Future<bool> signUp(ClientConfig clientConfig,
+    {required String email,
+    String? password,
+    String? invite,
+    String? captcha}) async {
+  final body = json.encode({
+    "email": email,
+    "password": password,
+    "captcha": captcha
+  }..removeWhere((key, value) => value == null));
+
+  final response = await clientConfig.httpClient.post(
+      Uri.parse('${clientConfig.apiUrl}/auth/account/create'),
+      body: body);
+
+  if (response.statusCode == 204) {
+    return true;
+  } else {
+    throw SignUpException();
+  }
+}

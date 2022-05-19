@@ -5,6 +5,6 @@ void main() {
   revoltClient.authEvents.listen((value) {
     print(value);
   });
-  revoltClient.login(
-      email: "196telecom@example.com", password: "04872273244sS");
+  revoltClient.signUp(email: "example@gmail.com", password: "22jUhEtnRS3vJBf");
+  revoltClient.login(email: "example@gmail.com", password: "22jUhEtnRS3vJBf");
 }

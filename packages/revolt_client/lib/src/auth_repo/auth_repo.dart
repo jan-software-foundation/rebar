@@ -8,6 +8,7 @@ class AuthRepo {
   BehaviorSubject<AuthStatus> authEvents = BehaviorSubject<AuthStatus>()
     ..add(AuthStatus.unknown);
   SessionDetails? session;
+
   login(ClientConfig clientConfig,
       {required String email,
       String? password,
@@ -26,5 +27,19 @@ class AuthRepo {
     } on LoginException {
       authEvents.add(AuthStatus.authFailed);
     }
+  }
+
+  signUp(ClientConfig clientConfig,
+      {required String email,
+      required String password,
+      String? invite,
+      String? captcha}) async {
+    await api.signUp(
+      clientConfig,
+      email: email,
+      password: password,
+      invite: invite,
+      captcha: captcha,
+    );
   }
 }

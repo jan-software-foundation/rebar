@@ -6,7 +6,7 @@ class ClientConfig {
   final http.Client httpClient;
 
   ClientConfig({
-    this.apiUrl = 'http://local.revolt.chat:8000/',
+    this.apiUrl = 'http://0.0.0.0:8000/',
     this.debug = false,
     httpClient,
   }) : httpClient = httpClient ?? http.Client();

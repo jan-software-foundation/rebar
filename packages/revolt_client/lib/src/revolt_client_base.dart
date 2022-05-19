@@ -23,5 +23,18 @@ class RevoltClient {
           friendlyName: friendlyName,
           captcha: captcha);
 
+  signUp(
+          {required String email,
+          required String password,
+          String? invite,
+          String? captcha}) async =>
+      authRepo.signUp(
+        clientConfig,
+        email: email,
+        password: password,
+        captcha: captcha,
+        invite: invite,
+      );
+
   BehaviorSubject<AuthStatus> get authEvents => authRepo.authEvents;
 }
